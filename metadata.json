@@ -1,0 +1,6 @@
+{
+  "name": "猛健樂與身體數據追蹤管家",
+  "description": "專為猛健樂使用者打造的健康管理工具：追蹤體重、體脂、胸腰臀三圍趨勢圖、施打劑量與下次提醒、月曆標記生理期、購買管理與劑量換算，支援 Windows 與 iPhone 跨裝置雲端同步與備份。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

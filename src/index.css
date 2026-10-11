@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --theme-primary: #FF85A0;
+  --theme-from: #FFAFC2;
+  --theme-to: #FFCCD5;
+  --theme-border: #FFE0E9;
+  --theme-bg-main: #FFF8FA;
+  --theme-bg-card: #FFF0F5;
+  --theme-text-main: #592736;
+  --theme-text-sub: #8A4F60;
+  --theme-shadow: rgba(255, 175, 194, 0.25);
+}
+
+body {
+  background-color: var(--theme-bg-main);
+  color: var(--theme-text-main);
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--theme-border);
+  color: var(--theme-text-main);
+}
+
+/* Dynamic theme overrides for the entire application */
+[data-theme] .bg-\[\#FFF8FA\],
+[data-theme] .bg-\[\#FFFAFC\],
+[data-theme] .bg-\[\#FFF0F3\] {
+  background-color: var(--theme-bg-main) !important;
+}
+
+[data-theme] .bg-\[\#FFF0F5\] {
+  background-color: var(--theme-bg-card) !important;
+}
+
+[data-theme] .border-\[\#FFE0E9\],
+[data-theme] .border-\[\#FFCCD5\],
+[data-theme] .border-\[\#FFEBF1\] {
+  border-color: var(--theme-border) !important;
+}
+
+[data-theme] .text-\[\#FF85A0\],
+[data-theme] .text-\[\#FB6F92\] {
+  color: var(--theme-primary) !important;
+}
+
+[data-theme] .text-\[\#592736\] {
+  color: var(--theme-text-main) !important;
+}
+
+[data-theme] .text-\[\#8A4F60\] {
+  color: var(--theme-text-sub) !important;
+}
+
+[data-theme] .from-\[\#FFAFC2\],
+[data-theme] .from-\[\#FB6F92\] {
+  --tw-gradient-from: var(--theme-from) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--theme-from), var(--theme-to)) !important;
+}
+
+[data-theme] .to-\[\#FFCCD5\],
+[data-theme] .to-\[\#FF8FAB\] {
+  --tw-gradient-to: var(--theme-to) !important;
+}
+
+[data-theme] .from-\[\#FF85A0\] {
+  --tw-gradient-from: var(--theme-primary) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--theme-primary), var(--theme-from)) !important;
+}
+
+[data-theme] .to-\[\#FFAFC2\] {
+  --tw-gradient-to: var(--theme-from) !important;
+}
+
+[data-theme] .bg-\[\#FF85A0\] {
+  background-color: var(--theme-primary) !important;
+}
+
+[data-theme] .bg-\[\#FFAFC2\] {
+  background-color: var(--theme-from) !important;
+}
+
+[data-theme] .ring-\[\#FFE0E9\],
+[data-theme] .ring-\[\#FFF8FA\],
+[data-theme] .ring-\[\#FFAFC2\] {
+  --tw-ring-color: var(--theme-border) !important;
+}
+
+/* Hide default bottom scrollbar on charts for direct swipe/drag navigation */
+.chart-scroll-container {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+.chart-scroll-container::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
